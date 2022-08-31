@@ -1,0 +1,45 @@
+.team-container {
+    margin: 4rem
+}
+
+.team-card {
+    width: 200px;
+    height: 350px;
+    margin-bottom: 3rem;
+}
+
+.team-img {
+    width: 200px;
+    height: 220px;
+    /* object-fit: cover; */
+}
+
+.team-name {
+    text-align: center;
+    margin: 1rem;
+    font-weight: 600;
+}
+
+.team-des {
+    text-align: center;
+}
+
+.team-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 6rem;
+    gap: 3rem
+}
+
+.team-footer {
+    text-align: center;
+}
+
+.social-icons {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    object-fit: cover;
+    margin: 1rem
+}
