@@ -1,7 +1,6 @@
 .journey-container {
     width: 1000px;
     margin: 6rem auto;
-    height: 100vh;
 }
 
 .journey-img {
@@ -54,14 +53,13 @@
 }
 
 @media screen and (max-width: 1050px){
-    .journey-container {
+    .journey-container, .journey-img {
         width: 700px;
-        margin: 6rem auto;
-        height: 100vh;
     }
-    
-    .journey-img {
-        width: 700px;
-        height: 40vh;
+}
+
+@media screen and (max-width: 750px){
+    .journey-container, .journey-img {
+        width: 600px;
     }
 }
