@@ -1,5 +1,3 @@
-import james from "assets/james.jpg"
-
 export const TeamCard = ({item}) => {
     return (
         <div className="mild-shadow team-card">
@@ -8,7 +6,7 @@ export const TeamCard = ({item}) => {
             <p className="font-xs team-des">{item.description}</p>
             <div className="flex-center">
             {item.socialLinks.map((item,index) => (
-                <img src={item} key={index} className="social-icons"/>
+                <img src={item} key={index} className="team-social-icons"/>
             ))}
             </div>
         </div>

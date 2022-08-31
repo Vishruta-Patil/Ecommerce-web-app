@@ -29,19 +29,21 @@ export const Contact = () => {
         <p className="font-md contact-main-header">REACH US AT</p>
 
         <div>
-          {contactData.map((item, index) => (
+          {contactData.map((item,index) => (
             <div className="contact-unit">
-              <p className="font-sm">{item.emailId}</p>
-              <p className="font-xs">{item.description}</p>
-            </div>
+            <p className="font-sm">{item.emailId}</p>
+            <p className="font-xs">{item.description}</p>
+          </div>
           ))}
+          
+          
         </div>
       </div>
 
-      <div className="social-handles">
+      <div className="social-handles ">
         <p className="font-xs">Stay in touch</p>
 
-        <div className="flex-center social-icons">
+        <div className="social-icons flex-center">
           <img src={twitter} alt="twitter" />
           <img src={insta} alt="insta" />
           <img src={facebook} alt="facebook" />
