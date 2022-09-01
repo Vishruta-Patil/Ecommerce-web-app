@@ -23,12 +23,12 @@
 }
 
 .filter-unit {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .cost-filter {
-    gap: 1.8rem;
-    margin: 5px 0;
+  gap: 1.8rem;
+  margin: 5px 0;
 }
 
 .color-filter-content {
@@ -42,7 +42,7 @@
 }
 
 .red-filter {
-    background-color: red;
+  background-color: red;
 }
 
 .blue-filter {
@@ -83,7 +83,7 @@
 .product-img {
   height: 12rem;
   width: 25rem;
-  object-fit: contain; 
+  object-fit: contain;
   margin: 2rem 0;
 }
 
@@ -111,13 +111,13 @@
   color: gray;
 }
 
-.cart-footer-content{
+.cart-footer-content {
   gap: 2rem;
-  margin: 0 2rem
+  margin: 0 2rem;
 }
 
 .cart-footer-unit {
-  gap: 1rem
+  gap: 1rem;
 }
 
 .order-btn {
@@ -128,7 +128,7 @@
   background-color: gray;
 }
 
-.cart-tag-line {  
+.cart-tag-line {
   height: 50vh;
 }
 
@@ -164,4 +164,17 @@
   font-size: 3.6rem;
   margin-top: 5rem;
   text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .store-content {
+    grid-template-areas:
+      "filter"
+      "store"
+      "cart";
+  }
+  .filter-column {
+    display: flex;
+    gap: 4.5rem
+  }
 }

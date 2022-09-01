@@ -25,6 +25,7 @@ export const Filter = () => {
         <FiFilter className="font-sm" onClick={() => productDispatch({type: CLEAR_ALL_FILTERS})}/>
       </div>
 
+<div className="filter-column">
       <div className=" filter-unit">
         <p className="font-vsm">Cost</p>
         <div className="cost-filter align-center font-xs">
@@ -138,6 +139,7 @@ export const Filter = () => {
           />
           <label htmlFor="sneakers">Sneakers</label>
         </div>
+      </div>
       </div>
 
       <button className="hero-btn clear-filter-btn" onClick={() => productDispatch({type: CLEAR_ALL_FILTERS})}>Clear All Filters</button>
