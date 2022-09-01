@@ -3,9 +3,19 @@ import blackwhite from "assets/black-white.png";
 import blueWhite from "assets/blue-white.jpg";
 import "pages/product/product.css";
 import { Link } from "react-router-dom";
+import { useProduct } from "context/productContext";
+import { ADD_TO_CART, REMOVE_FROM_CART } from "reducer/productConstant";
 
 export const SingleProductCard = ({ product }) => {
-  console.log(product && product?.id);
+  const { productDispatch, productState } = useProduct();
+
+  const productExists = (id) => {
+    const getProduct = productState.cart.find((product) => product.id === id);
+    if (getProduct) return true;
+    else return false;
+  };
+
+  const isProductInCart = productExists(product.id)
   return (
     <section>
       <div className="align-center font-sm gap-2">
@@ -96,7 +106,27 @@ export const SingleProductCard = ({ product }) => {
 
       <div className="flex-center product-btn-box">
         <button className="outline-btn product-btn">share Design</button>
-        <button className="hero-btn cart-btn product-btn">add to Cart</button>
+
+        {isProductInCart ? (
+          <button
+          className="hero-btn cart-btn product-btn"
+          onClick={() =>
+            productDispatch({ type: REMOVE_FROM_CART, payload: product.id })
+          }
+        >
+          remove from Cart
+        </button>
+        ) : (
+          <button
+          className="hero-btn cart-btn product-btn"
+          onClick={() =>
+            productDispatch({ type: ADD_TO_CART, payload: product })
+          }
+        >
+          add to Cart
+        </button>
+        )}
+        
       </div>
     </section>
   );

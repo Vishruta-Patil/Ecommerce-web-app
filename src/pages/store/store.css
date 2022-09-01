@@ -131,3 +131,31 @@
 .cart-tag-line {  
   height: 50vh;
 }
+
+.cart-card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cart-card-img {
+  width: 150px;
+  height: 100px;
+}
+
+.cart-price {
+  margin-top: 1rem;
+}
+
+.cart-img-content {
+  position: relative;
+}
+
+.cross-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: red;
+  font-size: 1.8rem;
+  cursor: pointer;
+}

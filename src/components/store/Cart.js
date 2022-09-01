@@ -1,6 +1,11 @@
+import { CartCard } from "components/card/CartCard";
+import { useProduct } from "context/productContext";
 import { FiShoppingBag } from "react-icons/fi";
 
 export const Cart = () => {
+  const { productState } = useProduct();
+  const { cart } = productState;
+
   return (
     <div className="cart-content mild-shadow ">
       <div className="store-section-header justify-between">
@@ -8,9 +13,18 @@ export const Cart = () => {
         <FiShoppingBag className="font-sm" />
       </div>
 
-      <p className="font-xs flex-center cart-tag-line">
-        What's stopping you, designer?
-      </p>
+      {cart.length === 0 ? (
+        <p className="font-xs flex-center cart-tag-line">
+          What's stopping you, designer?
+        </p>
+      ) : (
+        <div>
+          {cart.map((product, index) => (
+            <CartCard product={product}/>
+          ))}
+          
+        </div>
+      )}
 
       <div className="cart-footer">
         <div className="flex cart-footer-content">
