@@ -1,0 +1,15 @@
+.single-product-container {
+    display: grid;
+  grid-template-areas: "product product cart";
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.single-product {
+    grid-area: product;
+    padding: 3rem;
+}
+
+.cart-container {
+    grid-area: cart;
+}

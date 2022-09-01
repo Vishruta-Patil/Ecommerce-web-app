@@ -81,9 +81,15 @@
 }
 
 .product-img {
-  height: 15rem;
-  width: 20rem;
+  height: 12rem;
+  width: 25rem;
   object-fit: contain; 
+  margin: 2rem 0;
+}
+
+.product-card {
+  margin-bottom: 2rem;
+  color: black;
 }
 
 .product-details {

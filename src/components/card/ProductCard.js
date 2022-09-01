@@ -1,13 +1,12 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import shoe from "assets/shoe.jpg";
 
-export const ProductCard = () => {
+export const ProductCard = ({item}) => {
   return (
     <div className="product-card">
-      <img src={shoe} alt="shoe" className="product-img" />
-      <p className="font-vsm">Shoe 1</p>
+      <img src={item.img} alt="shoe" className="product-img" />
+      <p className="font-vsm">{item.name}</p>
       <div className="product-details">
-        <p className="font-xs">Rs 2000</p>
+        <p className="font-xs">Rs {item.price}</p>
 
         <div>
           <AiFillStar className="rating-star" />
