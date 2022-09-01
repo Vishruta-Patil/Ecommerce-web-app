@@ -1,0 +1,20 @@
+.not-found-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover; 
+    margin-top: 2rem;
+  }
+
+.lg-font {
+    font-size: 3.5rem;
+}
+
+.md-font {
+    font-size: 1.8rem;
+}
+
+.not-found-btn {
+    background-color: black;
+    padding: 1rem 6rem;
+    margin: 3rem
+}
