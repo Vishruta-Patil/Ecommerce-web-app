@@ -1,5 +1,5 @@
 import websitelogo from "assets/websitelogo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./header.css";
 
 export const Header = () => {
@@ -18,7 +18,9 @@ export const Header = () => {
   return (
     <section className="header-container">
       <div className="logo-content">
-        <img src={websitelogo} alt="logo" className="logo" />
+        <Link to="/">
+          <img src={websitelogo} alt="logo" className="logo" />
+        </Link>
       </div>
 
       <div className="nav-content">
