@@ -1,6 +1,11 @@
 import { productReducer } from "reducer/productReducer";
 import { createContext, useContext, useReducer } from "react";
-import { composeFunc, filterByPrice, filterByTemplate, filterByType } from "utils/filterHelper";
+import {
+  composeFunc,
+  filterByPrice,
+  filterByTemplate,
+  filterByType,
+} from "utils/filterHelper";
 
 const ProductContext = createContext();
 const useProduct = () => useContext(ProductContext);
@@ -9,9 +14,13 @@ const ProductProvider = ({ children }) => {
   const initialValue = {
     productData: [],
     cart: [],
-    filterByPrice: "",
-    template: "",
-    type: "",
+    filterByPrice: {
+      lessPrice: false,
+      mediumPrice: false,
+      highPrice: false,
+    },
+    template: [],
+    type: [],
   };
   const [productState, productDispatch] = useReducer(
     productReducer,

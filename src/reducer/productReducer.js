@@ -31,19 +31,36 @@ export const productReducer = (state, action) => {
     case FILTER_BY_PRICE_RANGE:
       return {
         ...state,
-        filterByPrice: action.payload,
+        filterByPrice: {
+          ...state.filterByPrice,
+          [action.payload] : !state.filterByPrice[action.payload]
+        },
       };
 
     case FILTER_BY_TEMPLATES:
+      if(state.template.includes(action.payload)) {
+        return {
+          ...state,
+          template: state.template.filter(temp => temp !== action.payload)
+        }
+      }
       return {
         ...state,
-        template: action.payload,
+        template: [...state.template, action.payload]
       };
 
     case FILTER_BY_TYPE:
+      if (state.type.includes(action.payload)) {
+        return {
+          ...state,
+          type: [...state.type].filter(
+            (type) => type !== action.payload
+          ),
+        };
+      }
       return {
         ...state,
-        type: action.payload,
+        type: [...state.type, action.payload],
       };
 
     case CLEAR_ALL_FILTERS:

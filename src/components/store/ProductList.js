@@ -4,7 +4,7 @@ import { ProductData } from "data/productData";
 import { Link } from "react-router-dom";
 
 export const ProductList = () => {
-  const {filteredProductData} = useProduct()
+  const { filteredProductData } = useProduct();
   return (
     <div className="main-content mild-shadow">
       <div className="store-section-header justify-between">
@@ -16,13 +16,19 @@ export const ProductList = () => {
       </div>
 
       <div className="products-content">
-        {filteredProductData.length === 0 ? <h1 className="empty-products">No Products Found</h1> :
-        
-        filteredProductData?.map((item, index) => (
-          <Link to={`/product/${item.id}`} style={{ textDecoration: "none" }} key={index}>
-            <ProductCard item={item} key={index} />
-          </Link>
-        ))}
+        {filteredProductData?.length === 0 ? (
+          <h1 className="empty-products">No Products Found</h1>
+        ) : (
+          filteredProductData?.map((item, index) => (
+            <Link
+              to={`/product/${item.id}`}
+              style={{ textDecoration: "none" }}
+              key={index}
+            >
+              <ProductCard item={item} key={index} />
+            </Link>
+          ))
+        )}
       </div>
     </div>
   );
