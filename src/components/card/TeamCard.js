@@ -6,7 +6,7 @@ export const TeamCard = ({item}) => {
             <p className="font-xs team-des">{item.description}</p>
             <div className="flex-center">
             {item.socialLinks.map((item,index) => (
-                <img src={item} key={index} className="team-social-icons"/>
+                <img src={item} key={index} className="team-social-icons" />
             ))}
             </div>
         </div>

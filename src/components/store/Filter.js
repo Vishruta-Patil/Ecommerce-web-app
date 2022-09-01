@@ -140,7 +140,7 @@ export const Filter = () => {
         </div>
       </div>
 
-      <button className="hero-btn clear-filter-btn" onClick={() => productDispatch({type: CLEAR_ALL_FILTERS})}>Clear All</button>
+      <button className="hero-btn clear-filter-btn" onClick={() => productDispatch({type: CLEAR_ALL_FILTERS})}>Clear All Filters</button>
     </div>
   );
 };

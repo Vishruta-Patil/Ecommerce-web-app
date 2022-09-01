@@ -15,7 +15,7 @@ export const SingleProductCard = ({ product }) => {
     else return false;
   };
 
-  const isProductInCart = productExists(product.id)
+  const isProductInCart = productExists(product?.id)
   return (
     <section>
       <div className="align-center font-sm gap-2">

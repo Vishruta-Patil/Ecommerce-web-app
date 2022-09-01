@@ -29,6 +29,7 @@ export const Header = () => {
             to={item.pathname}
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             className="nav-item font-xs"
+            key={index}
           >
             {item?.navTitle}
           </NavLink>

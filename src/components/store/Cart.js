@@ -20,7 +20,7 @@ export const Cart = () => {
       ) : (
         <div>
           {cart.map((product, index) => (
-            <CartCard product={product}/>
+            <CartCard product={product} key={index}/>
           ))}
           
         </div>

@@ -30,7 +30,7 @@ export const Contact = () => {
 
         <div>
           {contactData.map((item,index) => (
-            <div className="contact-unit">
+            <div className="contact-unit" key={index}>
             <p className="font-sm">{item.emailId}</p>
             <p className="font-xs">{item.description}</p>
           </div>

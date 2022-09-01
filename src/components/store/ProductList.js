@@ -19,7 +19,7 @@ export const ProductList = () => {
         {filteredProductData.length === 0 ? <h1 className="empty-products">No Products Found</h1> :
         
         filteredProductData?.map((item, index) => (
-          <Link to={`/product/${item.id}`} style={{ textDecoration: "none" }}>
+          <Link to={`/product/${item.id}`} style={{ textDecoration: "none" }} key={index}>
             <ProductCard item={item} key={index} />
           </Link>
         ))}
