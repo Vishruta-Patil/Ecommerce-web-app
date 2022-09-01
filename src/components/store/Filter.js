@@ -18,6 +18,8 @@ export const Filter = () => {
 
   const { productState, productDispatch } = useProduct();
 
+  const typeData = ["loafers", "sneakers"]
+
   return (
     <div className="filter-content mild-shadow">
       <div className="store-section-header justify-between">
@@ -123,28 +125,19 @@ export const Filter = () => {
 
         <div className=" filter-unit">
           <p className="font-vsm">Type</p>
-          <div className="cost-filter align-center font-xs">
+          {typeData.map((item,index) => (
+            <div className="cost-filter align-center font-xs">
             <input
               type="checkbox"
               onChange={() =>
-                productDispatch({ type: FILTER_BY_TYPE, payload: "loafers" })
+                productDispatch({ type: FILTER_BY_TYPE, payload: item })
               }
-              id="loafers"
-              checked={productState.type.includes("loafers")}
+              id={item}
+              checked={productState.type.includes(item)}
             />
-            <label htmlFor="loafers">Loafers</label>
+            <label htmlFor={item}>{item[0].toUpperCase() + item.slice(1)}</label>
           </div>
-          <div className="cost-filter align-center font-xs">
-            <input
-              type="checkbox"
-              onChange={() =>
-                productDispatch({ type: FILTER_BY_TYPE, payload: "sneakers" })
-              }
-              id="sneakers"
-              checked={productState.type.includes("sneakers")}
-            />
-            <label htmlFor="sneakers">Sneakers</label>
-          </div>
+          ))}
         </div>
       </div>
 
