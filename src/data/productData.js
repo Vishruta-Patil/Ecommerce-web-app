@@ -14,7 +14,7 @@ export const ProductData = [
         name: "KSL 01",
         price: 2000,
         img: shoe_1,
-        templete: 2,
+        template: 2,
         type: "sneakers"
     },
     {
@@ -22,7 +22,7 @@ export const ProductData = [
         name: "KSW 01",
         price: 1999,
         img: shoe_3,
-        templete: 3,
+        template: 3,
         type: "sneakers"
     },
     {
@@ -30,7 +30,7 @@ export const ProductData = [
         name: "Royal S 01",
         price: 6000,
         img: shoe_4,
-        templete: 3,
+        template: 3,
         type: "loafers"
     },
     {
@@ -38,7 +38,7 @@ export const ProductData = [
         name: "KSL 01",
         price: 2000,
         img: shoe_2,
-        templete: 4,
+        template: 4,
         type: "sneakers"
     },
     {
@@ -46,7 +46,7 @@ export const ProductData = [
         name: "KSW 01",
         price: 7500,
         img: shoe,
-        templete: 2,
+        template: 2,
         type: "sneakers"
     },
     {
@@ -54,7 +54,7 @@ export const ProductData = [
         name: "Royal S 01",
         price: 5000,
         img: shoe_5,
-        templete: 2,
+        template: 2,
         type: "loafers"
     },
 ]

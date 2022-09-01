@@ -1,8 +1,10 @@
 import { ProductCard } from "components/card/ProductCard";
+import { useProduct } from "context/productContext";
 import { ProductData } from "data/productData";
 import { Link } from "react-router-dom";
 
 export const ProductList = () => {
+  const {filteredProductData} = useProduct()
   return (
     <div className="main-content mild-shadow">
       <div className="store-section-header justify-between">
@@ -14,7 +16,9 @@ export const ProductList = () => {
       </div>
 
       <div className="products-content">
-        {ProductData.map((item, index) => (
+        {filteredProductData.length === 0 ? <h1 className="empty-products">No Products Found</h1> :
+        
+        filteredProductData?.map((item, index) => (
           <Link to={`/product/${item.id}`} style={{ textDecoration: "none" }}>
             <ProductCard item={item} key={index} />
           </Link>

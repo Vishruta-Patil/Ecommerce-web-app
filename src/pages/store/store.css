@@ -159,3 +159,9 @@
   font-size: 1.8rem;
   cursor: pointer;
 }
+
+.empty-products {
+  font-size: 3.6rem;
+  margin-top: 5rem;
+  text-align: center;
+}
